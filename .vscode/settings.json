@@ -1,0 +1,7 @@
+{
+    "editor.renderWhitespace": "all", 
+    "editor.formatOnSave": false,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    }
+}
