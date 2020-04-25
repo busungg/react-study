@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import MyComponent, { Temp } from './Atoms/MyComponent';
+//import Counter from './Atoms/Counter';
+import Average from './Atoms/Average';
+import Info from './Atoms/Info';
 
 class App extends Component {
   render() {
-    Temp();
-
-    return <MyComponent>리액트</MyComponent>;
+    return (
+      <>
+        <Average />
+        <Info></Info>
+      </>
+    );
   }
 }
 
