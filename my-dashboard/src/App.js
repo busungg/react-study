@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-//import Counter from './Atoms/Counter';
-import Average from './Atoms/Average';
-import Info from './Atoms/Info';
-import { setCallbacks, getState } from './Hooks/UseInputs';
-
-setCallbacks(function () {
-  const state = getState();
-  console.log('App callback and state: ', state);
-});
+import InfoParent from './Atoms/InfoParent';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.numbers = [1, 2, 3, 4, 5, 6];
+  }
+
   render() {
+    console.log('App render');
     return (
       <>
-        <Average />
-        <Info></Info>
+        {this.numbers.map((num, idx) => {
+          return <InfoParent num={num} key={idx} />;
+        })}
       </>
     );
   }

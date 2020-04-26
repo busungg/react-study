@@ -11,9 +11,11 @@ export const setCallbacks = (callback) => {
   _callbacks.push(callback);
 };
 
-export const dispatchCallbacks = () => {
-  _callbacks.forEach((callback) => {
-    callback();
+export const dispatchCallbacks = (key) => {
+  _callbacks.forEach((callback, idx) => {
+    if (key - 1 === idx) {
+      callback();
+    }
   });
 };
 

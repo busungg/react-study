@@ -1,9 +1,7 @@
 import React from 'react';
 import useInputs, { dispatchCallbacks } from '../../Hooks/UseInputs';
 
-const Info = () => {
-  console.log('rerendering');
-
+const Info = (props) => {
   const [state, onChange] = useInputs({
     name: '',
     nickName: ''
@@ -11,7 +9,7 @@ const Info = () => {
 
   const { name, nickName } = state;
 
-  dispatchCallbacks();
+  dispatchCallbacks(props.num);
 
   return (
     <div>
