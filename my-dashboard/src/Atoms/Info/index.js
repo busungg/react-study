@@ -1,13 +1,17 @@
 import React from 'react';
-import useInputs from '../../Hooks/UseInputs';
+import useInputs, { dispatchCallbacks } from '../../Hooks/UseInputs';
 
 const Info = () => {
+  console.log('rerendering');
+
   const [state, onChange] = useInputs({
     name: '',
     nickName: ''
   });
 
   const { name, nickName } = state;
+
+  dispatchCallbacks();
 
   return (
     <div>
