@@ -15,7 +15,7 @@ const TodoInsert = ({ onInsert }) => {
       setValue('');
       e.preventDefault();
     },
-    [onInsert, value],
+    [onInsert, value]
   );
 
   return (
