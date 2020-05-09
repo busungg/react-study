@@ -1,0 +1,51 @@
+.tabs__view {
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+}
+
+.tabs__view [role="tablist"] {
+    height: 40px;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+}
+
+.tabs__view [role="tab"] {
+    min-width: 100px;
+}
+
+.tabs__view [role="tabpanel"] {
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+}
+
+.tabs__view :global(.nav-tabs) {
+    border-bottom: 1px solid #474747 !important;
+}
+
+/* Inactive tab */
+.tabs__view nav > a {
+    color: #c8c8c8;
+    background-color: #474747;
+    transition: all 0.2s ease-in;
+}
+
+.tabs__view nav > a:hover {
+    background-color: #666666;
+}
+
+/* Active tab */
+.tabs__view nav > :global(a.active),
+.tabs__view nav > :global(a.active):hover,
+.tabs__view nav > :global(a.active):focus {
+    color: #474747 !important;
+    background-color: #1e1e1e !important;
+}
+
+/* Disabled tab */
+.tabs__view ul > li.disabled > a {
+    background-color: lightgray;
+    color: darkgray;
+}
+

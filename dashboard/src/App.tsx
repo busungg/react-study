@@ -1,14 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Tabs from './component/atom/Tabs';
+import TabsView from './component/atom/TabsView';
 
 function App() {
   return (
     <div className="App">
-      <Tabs></Tabs>
+      <div style={{ width: '500px', height: '600px' }}>
+        <TabsView
+          tabContainerId="test"
+          tabs={[
+            {
+              eventKey: 'tab1',
+              title: 'tab1',
+              children: (
+                <div>
+                  <div>1</div>
+                </div>
+              )
+            },
+            {
+              eventKey: 'tab2',
+              title: 'tab2',
+              children: (
+                <div>
+                  <div>1</div>
+                </div>
+              )
+            }
+          ]}
+        />
+      </div>
     </div>
   );
 }

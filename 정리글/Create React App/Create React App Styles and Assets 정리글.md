@@ -71,3 +71,7 @@ class Button extends Component {
 <!-- This button has red background but not red text -->
 <button class="Button_error_ax7yz">Error Button</button>
 ```
+
+5. 주의점
+모든 class명을 변경 하기 때문에 그대로 사용하기 원하는 css가 존재 할 시에는 :global()이라는 명령어를 사용 해야 합니다.    
+자세한 내용은 https://github.com/css-modules/css-modules 에서 확인 가능합니다.
