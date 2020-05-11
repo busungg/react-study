@@ -3,8 +3,43 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TabsView from './component/atom/TabsView';
+import CardsView from './component/atom/CardsView';
+import Thumbnail from './component/atom/Thumbnail';
 
 function App() {
+  const array = [
+    {
+      thumbnail:
+        'https://s.pstatic.net/static/www/mobile/edit/2020/0510/cropImg_728x360_31016872707389082.jpeg',
+      title: '소원 리다',
+      text: 'GFRIEND SUV'
+    },
+    {
+      thumbnail:
+        'https://s.pstatic.net/static/www/mobile/edit/2020/0510/cropImg_728x360_31016872707389082.jpeg',
+      title: '소원 리다1',
+      text: 'GFRIEND SUV1'
+    },
+    {
+      thumbnail:
+        'https://s.pstatic.net/static/www/mobile/edit/2020/0510/cropImg_728x360_31016872707389082.jpeg',
+      title: '소원 리다2',
+      text: 'GFRIEND SUV2'
+    },
+    {
+      thumbnail:
+        'https://s.pstatic.net/static/www/mobile/edit/2020/0510/cropImg_728x360_31016872707389082.jpeg',
+      title: '소원 리다3',
+      text: 'GFRIEND SUV3'
+    },
+    {
+      thumbnail:
+        'https://s.pstatic.net/static/www/mobile/edit/2020/0510/cropImg_728x360_31016872707389082.jpeg',
+      title: '소원 리다4',
+      text: 'GFRIEND SUV4'
+    }
+  ];
+
   return (
     <div className="App">
       <div style={{ width: '500px', height: '600px' }}>
@@ -31,6 +66,46 @@ function App() {
             }
           ]}
         />
+        <div style={{ width: '800px', height: '600px' }}>
+          <CardsView>
+            <>
+              {array.map((item, idx) => {
+                return (
+                  <Thumbnail
+                    thumbnail={item.thumbnail}
+                    title={item.title}
+                    text={item.text}
+                    key={idx}
+                  />
+                );
+              })}
+            </>
+            <>
+              {array.map((item, idx) => {
+                return (
+                  <Thumbnail
+                    thumbnail={item.thumbnail}
+                    title={item.title}
+                    text={item.text}
+                    key={idx}
+                  />
+                );
+              })}
+            </>
+            <>
+              {array.map((item, idx) => {
+                return (
+                  <Thumbnail
+                    thumbnail={item.thumbnail}
+                    title={item.title}
+                    text={item.text}
+                    key={idx}
+                  />
+                );
+              })}
+            </>
+          </CardsView>
+        </div>
       </div>
     </div>
   );
