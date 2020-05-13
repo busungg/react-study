@@ -3,8 +3,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TabsView from './component/atom/TabsView';
-import CardsView from './component/atom/CardsView';
-import Thumbnail from './component/atom/Thumbnail';
+import HScrollAtom from './component/atom/HScrollAtom';
+import ThumbnailCard from './component/atom/ThumbnailCard';
 
 function App() {
   const array = [
@@ -49,7 +49,7 @@ function App() {
             {
               eventKey: 'tab1',
               title: 'tab1',
-              children: (
+              child: (
                 <div>
                   <div>1</div>
                 </div>
@@ -58,7 +58,7 @@ function App() {
             {
               eventKey: 'tab2',
               title: 'tab2',
-              children: (
+              child: (
                 <div>
                   <div>1</div>
                 </div>
@@ -67,8 +67,7 @@ function App() {
           ]}
         />
         <div style={{ width: '800px', height: '600px' }}>
-          <CardsView>
-            <>
+          <HScrollAtom>
               {array.map((item, idx) => {
                 return (
                   <Thumbnail
@@ -103,8 +102,7 @@ function App() {
                   />
                 );
               })}
-            </>
-          </CardsView>
+          </HScrollAtom>
         </div>
       </div>
     </div>
